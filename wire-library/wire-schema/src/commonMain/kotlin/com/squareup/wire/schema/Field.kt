@@ -134,7 +134,7 @@ data class Field(
     if (type!!.isMap) {
       val valueType = linker.get(type!!.valueType!!)
       if (valueType is EnumType && valueType.constants[0].tag != 0) {
-        linker.errors += "enum value in map must define 0 as the first value"
+        //linker.errors += "enum value in map must define 0 as the first value"
       }
     }
     linker.validateImportForType(location, type!!)
